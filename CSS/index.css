@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #1e3a8a;
+    --secondary: #d0d0d0;
+    --bg: #0f0f0f;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--primary);
+}
+
+p {
+    color: var(--secondary);
+}
+
+header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.head-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navmenu {
+    font-size: 18px;
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+.logo h1{
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)) 
+}
+
+/* end of head section  */
+#ayush {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+}
+
+
+
+.hero-section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+
+}
+
+.hero-section h3 {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+.hero-section p {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.hero-section {
+    width: 80%;
+    margin: auto;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    gap: 50px;
+    min-height: 70vh;
+
+}
+
+.introduction p {
+    width: 550px;
+}
+.introduction a{
+    text-decoration: none;
+    color: bl;
+}
+.profile-picture {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px white solid;
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 25px rgba(0, 212, 255, 0.4));
+    transition: 0.3s;
+}
+
+.profile-picture img:hover {
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8))
+            drop-shadow(0 0 30px rgba(0, 212, 255, 0.6));
+}
+
+/* hire me button */
+button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+}
+
+button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -2px -2px 20px #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ufo */
+.ufo {
+    overflow: hidden;
+}
+
+.ufo img {
+    height: 70px;
+    width: auto;
+    animation: move 10s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.6));
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(1550px);
+    }
+}
+
+/* footer */
+.foot-container {
+    border-top: 2px var(--secondary) solid;
+    padding-top: 20px;
+    width: 85%;
+    margin: auto;
+    height: 80px;
+}
+
+.copyrights {
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 50%;
+}
+
+footer {
+    font-size: 17px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.socials a{
+    color: white;
+}
