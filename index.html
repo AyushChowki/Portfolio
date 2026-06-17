@@ -1,71 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="CSS/index.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="CSS/index.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="head-container">
-            <div class="logo">
-                <h1>Portfolio</h1>
-            </div>
-            <div class="menu">
-                <nav>
-                    <ul class="navmenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./skills.html">Skills</a></li>
-                        <li><a href="./project.html">Projects</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="head-container">
+        <div class="logo">
+          <h2>Portfolio</h2>
         </div>
+        <div class="menu">
+          <nav>
+            <ul class="navmenu">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <div class="hero-section">
-        <div class="information">
-            <div class="introduction">
-                <h1>Hi, I'm <span id="ayush">Ayush chowki</span></h1>
-                </h1>
-                <h3>Web Developer</h3>
-                <p>I craft modern, responsive websites with clean code and attention to detail. Specializing in HTML,
-                    CSS, JavaScript, and modern frameworks to bring ideas to life.
-                </p>
-                <a href="./contact.html">
-                    <button>
-                    <span>Hire me </span>
-                </button>
-                </a>
-            </div>
-            <div class="profile-picture">
-                <img src="./IMG/pp.jpeg" alt="">
-            </div>
-        </div>
+    <div class="hero-section" id="home">
+      <h1>Hi, I'm <span id="ayush">Ayush chowki</span></h1>
+      <h3>Web Developer</h3>
+      <p>
+        A fresh perspective with a strong drive to learn, adapt, and deliver.
+      </p>
+      <div class="hero-section-btn">
+        <button>Hire me</button>
+        <button>Projects</button>
+      </div>
     </div>
-    <div class="ufo">
-        <img src="./IMG/ufo-removebg-preview.png" alt="">
+    <div class="about" id="about">
+      <h1>About me</h1>
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        class="container"
+      >
+        <div class="about_img">
+          <img src="./IMG/About.png" alt="about" />
+        </div>
+        <div
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          class="about_info"
+        >
+          <h3>I'm Ayush Chowki, a Web Developer</h3>
+          <p>
+            I am a Web Developer who builds digital interfaces that demand
+            attention. I focus on writing clean, efficient code to transform
+            creative concepts into fast, pixel-perfect, and fully responsive web
+            experiences that look flawless on any screen size
+          </p>
+          <p>
+            Instead of relying on bloated templates, I build from scratch using
+            Modern JavaScript (ES6+) for dynamic interactivity and smooth DOM
+            manipulation, combined with Bootstrap for rapid, utility-first
+            styling and robust grid layouts. Backed by solid HTML5 & CSS3
+            fundamentals, I bring an adaptable fresher mindset trained entirely
+            on modern dev workflows and web standards, ready to deliver real
+            value from day one
+          </p>
+          <button>Download CV</button>
+        </div>
+      </div>
+    </div>
+    <div class="projects" id="projects">
+      <h1>Projects</h1>
+      <div class="show_project">
+        <div class="card mb-5 border-0">
+          <img
+            src="./IMG/fade_forge_screenshot.png"
+            class="card-img-top"
+            alt="Fade Forge Project Screenshot"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Fade Forge</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="lang_span">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+              <span>Javascript</span>
+            </div>
+            <button>View Project</button>
+          </div>
+        </div>
+        <div class="card mb-5 border-0">
+          <img
+            src="./IMG/shivsahyadri_pratishthan_screenshot.png"
+            class="card-img-top"
+            alt="Shivsahyadri pratishthan Screenshot"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Shivsahyadri Pratishthan</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="lang_span">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+              <span>Javascript</span>
+            </div>
+            <button>View Project</button>
+          </div>
+        </div>
+        <div class="card mb-5 border-0">
+          <img
+            src="./IMG/fade_forge_screenshot.png"
+            class="card-img-top"
+            alt="Fade Forge Project Screenshot"
+          />
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Fade Forge</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="lang_span">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+              <span>Javascript</span>
+            </div>
+            <button>View Project</button>
+          </div>
+        </div>
+      </div>
     </div>
     <footer>
-        <div class="foot-container">
-
-            <div class="socials">
-                <p><a href="https://github.com/Ayush200623"><i class="fa-brands fa-github"></i></a></p>
-                <p><a href="https://www.linkedin.com/in/ayush-chowki-5990b6305/"><i class="fa-brands fa-linkedin"></i></a></p>
-                <p><a href="https://www.instagram.com/ayushc96_/"><i class="fa-brands fa-instagram"></i></a></p>
-            </div>
-            <div class="copyrights">
-                <p>Copyright © 2026 Ayush chowki</p>
-            </div>
+      <div class="foot-container">
+        <div class="socials">
+          <p>
+            <a href="https://github.com/Ayush200623"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/ayush-chowki-5990b6305/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/ayushc96_/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </p>
         </div>
+        <div class="copyrights">
+          <p>Copyright © 2026 Ayush chowki</p>
+        </div>
+      </div>
     </footer>
-</body>
-
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
