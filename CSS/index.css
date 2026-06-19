@@ -17,7 +17,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
-p {
+.about p {
   color: var(--secondary);
 }
 
@@ -61,8 +61,8 @@ header {
 }
 
 /* end of head section  */
-#home{
-  scroll-margin-top: 100px;
+#home {
+  scroll-margin-top: 130px;
 }
 .hero-section {
   display: flex;
@@ -70,7 +70,7 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 60vh;
+  height: 65vh;
 }
 #ayush {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -125,14 +125,16 @@ button:hover {
 }
 
 /* about */
-
+#about {
+  scroll-margin-top: 100px;
+}
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 85%;
   margin: auto;
-  height: 85vh;
+  height: 80vh;
   justify-content: center;
 }
 .about img {
@@ -148,7 +150,7 @@ button:hover {
   align-items: left;
 }
 .about_info p,
-h3 {
+.about_info {
   margin-bottom: 15px;
 }
 .container {
@@ -159,7 +161,7 @@ h3 {
 /* projects */
 #projects {
     scroll-margin-top: 90px; 
-    height:140vh;
+    height:160vh;
 }
 .projects{
   display: flex;
@@ -170,35 +172,38 @@ h3 {
 .show_project {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 75%;
+  max-width: 85%;
   margin: auto;
-  gap: 100px;
+  gap: 80px;
 }
 .show_project img {
   width: 100%;
 }
 .card {
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: #ffffff;
   color: #000000;
   overflow: hidden;
-}
-.card h3, .card p{
-  color: #000000;
 }
 .card-body{
   display: flex;
   flex-direction: column;
   align-items: start;
 }
+.card-body h2, .card-body p, .lang_span, button {
+  margin-left:15px;
+  margin-top: 15px;
+}
+
 .lang_span{
   display: flex;
   gap: 5px;
 }
+
 .card-body span{
-  padding: 5px;
+  padding: 6px;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 6px;
   background-color: rgb(144, 140, 140);
   color: rgb(255, 255, 255);
 }
