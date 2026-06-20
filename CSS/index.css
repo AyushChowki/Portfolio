@@ -4,22 +4,27 @@
 }
 
 :root {
-  --primary: #1e3a8a;
-  --secondary: #d0d0d0;
-  --bg: #0f0f0f;
+  --text-main: #f0f7f4;
+  --text-muted: #8fa095;
+  --neon-green: #39ff14;
+  --font-heading:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-para:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-anchor: "JetBrains Mono", monospace;
 }
 
 body {
-  color: var(--secondary);
+  color: var(--text-main);
   box-sizing: border-box;
-  background: linear-gradient(
-    to bottom,
+  background: radial-gradient(
+    circle at center,
     #010804 0%,
-    #031408 15%,
-    #0a3215 35%,
+    #031408 30%,
     #0a3215 65%,
-    #031408 85%,
-    #010804 100%
+    #144e24 100%
   );
   background-attachment: fixed;
 }
@@ -28,17 +33,13 @@ html {
   scroll-behavior: smooth;
 }
 
-.about p {
-  color: var(--secondary);
-}
-
 header {
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   justify-content: center;
   position: fixed;
-    background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 
   width: 100%;
   z-index: 1000;
@@ -57,19 +58,23 @@ header {
 }
 
 .navmenu {
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
   list-style: none;
-  gap: 50px;
+  gap: 40px;
+  font-family: var(--font-anchor);
 }
 
 .navmenu a {
+  color: var(--text-muted);
   text-decoration: none;
-  color: var(--secondary);
+  transition: color 0.2s ease;
 }
-
+.navmenu a:hover {
+  color: var(--neon-green);
+}
 .logo h2 {
-  filter: drop-shadow(0 0 2px rgba(0, 212, 255, 0.6));
+  font-family: var(--font-heading);
 }
 
 #home {
@@ -82,25 +87,26 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 90vh;
+  min-height: 90vh;
 }
 
-#ayush {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+#home h1 {
+  font-family: var(--font-heading);
+  background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+  filter: drop-shadow(0 0 1px rgb(13, 239, 47));
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
-}
-
-.hero-section h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-para);
   font-weight: 700;
   font-size: 65px;
   margin-top: 80px;
 }
 
 .hero-section h3 {
-  font-family: "Courier Prime", monospace;
+  color: var(--neon-green);
+  font-family: var(--font-anchor);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 32px;
@@ -108,7 +114,7 @@ header {
 }
 
 .hero-section p {
-  font-family: "Courier Prime", monospace;
+  font-family: var(--font-para);
   font-weight: 700;
   font-size: 18px;
   margin-top: 15px;
@@ -122,23 +128,26 @@ header {
   gap: 20px;
 }
 
-button {
-  background-color: #f3f7fe;
-  color: #3b82f6;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
+.hero-section-btn button {
+  margin: 0;
+  background: transparent;
+  border: 1px solid #28a745;
+  color: #28a745;
+  border-radius: 6px;
   width: 100px;
   height: 45px;
-  transition: 0.3s;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #3b82f6;
-  box-shadow: 0 0 0 5px #3b83f65f;
-  color: #fff;
+.hero-section-btn button:hover {
+  background-color: #28a745;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
 }
-
+/* about */
 #about {
   scroll-margin-top: 120px;
 }
@@ -150,6 +159,7 @@ button:hover {
 }
 
 .about {
+  font-family: var(--font-heading);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,19 +184,53 @@ button:hover {
 .about_info p,
 .about_info {
   margin-bottom: 15px;
+  color: var(--text-muted);
+  font-family: var(--font-para);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.about h3 {
+  color: #ffffff; /* Crisp pure white for immediate readability */
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.about button {
+  margin: 0;
+  background: transparent;
+  border: 1px solid #28a745;
+  color: #28a745;
+  border-radius: 6px;
+  width: 130px;
+  height: 45px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
+.about button:hover {
+  background-color: #28a745;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+}
 .container {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   align-items: center;
+  padding: 0;
 }
 
+/* projects */
 #projects {
   scroll-margin-top: 50px;
 }
 
 .projects {
+  font-family: var(--font-heading);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,12 +280,13 @@ button:hover {
 .card-body h2 {
   margin: 0 0 15px 0;
   color: #ffffff;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-heading);
 }
 
 .card-body p {
   margin: 0 0 20px 0;
   color: #a0aec0;
+  font-family: var(--font-para);
 }
 
 .lang_span {
@@ -257,7 +302,7 @@ button:hover {
   border-radius: 6px;
   background-color: rgba(255, 255, 255, 0.07);
   color: #a9dfbf;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-anchor);
   font-size: 0.8rem;
 }
 
@@ -267,7 +312,7 @@ button:hover {
   border: 1px solid #28a745;
   color: #28a745;
   border-radius: 6px;
-  width: 100%;
+  width: 570px;
   height: 45px;
   font-family: "JetBrains Mono", monospace;
   font-weight: 600;
@@ -293,11 +338,10 @@ button:hover {
   border: 1px solid rgb(106, 100, 100);
   background-color: rgba(255, 255, 255, 0.03);
   border-radius: 5px;
-  
 }
 
 .contact h2 {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
@@ -342,9 +386,28 @@ button:hover {
 .textarea .form-control::placeholder {
   color: rgba(169, 223, 191, 0.4);
 }
+.contact button {
+  margin: 0;
+  background: transparent;
+  border: 1px solid #28a745;
+  color: #28a745;
+  border-radius: 6px;
+  width: 130px;
+  height: 45px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #28a745;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+}
 /* footer */
 .foot-container {
-  border-top: 2px var(--secondary) solid;
+  border-top: 2px var(--text-main) solid;
   padding-top: 20px;
   width: 85%;
   margin: auto;
@@ -352,6 +415,7 @@ button:hover {
 }
 
 .copyrights {
+  font-family: var(--font-anchor);
   display: flex;
   justify-content: center;
   height: 40%;
