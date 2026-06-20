@@ -10,27 +10,38 @@
 }
 
 body {
-  background-color: var(--bg);
   color: var(--secondary);
   box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    #010804 0%,
+    #031408 15%,
+    #0a3215 35%,
+    #0a3215 65%,
+    #031408 85%,
+    #010804 100%
+  );
+  background-attachment: fixed;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .about p {
   color: var(--secondary);
 }
 
 header {
   padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
-  position: sticky;
-  top: 0;
-  background-color: rgba(15, 15, 15, 0.9);
+  position: fixed;
+    background-color: rgba(255, 255, 255, 0.05);
+
+  width: 100%;
   z-index: 1000;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
 }
 
 .head-container {
@@ -56,22 +67,24 @@ header {
   text-decoration: none;
   color: var(--secondary);
 }
+
 .logo h2 {
   filter: drop-shadow(0 0 2px rgba(0, 212, 255, 0.6));
 }
 
-/* end of head section  */
 #home {
   scroll-margin-top: 130px;
 }
+
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 65vh;
+  height: 90vh;
 }
+
 #ayush {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   -webkit-background-clip: text;
@@ -83,6 +96,7 @@ header {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 65px;
+  margin-top: 80px;
 }
 
 .hero-section h3 {
@@ -99,7 +113,7 @@ header {
   font-size: 18px;
   margin-top: 15px;
 }
-/* btn */
+
 .hero-section-btn {
   height: 15vh;
   display: flex;
@@ -107,6 +121,7 @@ header {
   justify-content: center;
   gap: 20px;
 }
+
 button {
   background-color: #f3f7fe;
   color: #3b82f6;
@@ -124,88 +139,208 @@ button:hover {
   color: #fff;
 }
 
-/* about */
 #about {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 120px;
 }
+
+.container {
+  max-width: 85%;
+  margin: auto;
+  padding-bottom: 60px;
+}
+
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 85%;
-  margin: auto;
-  height: 80vh;
+  height: 65vh;
   justify-content: center;
 }
+
 .about img {
   height: 300px;
   width: auto;
 }
+
 .about_info {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  height: 50vh;
+  height: auto;
   flex-direction: column;
   align-items: left;
 }
+
 .about_info p,
 .about_info {
   margin-bottom: 15px;
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   align-items: center;
 }
-/* projects */
+
 #projects {
-    scroll-margin-top: 90px; 
-    height:160vh;
+  scroll-margin-top: 50px;
 }
-.projects{
+
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: auto;
+  padding: 80px 0;
 }
+
+.projects h1 {
+  margin-bottom: 40px;
+}
+
 .show_project {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 85%;
+  grid-template-columns: repeat(2, 1fr);
+  width: 85%;
+  max-width: 1300px;
   margin: auto;
-  gap: 80px;
+  gap: 40px;
 }
+
 .show_project img {
   width: 100%;
+  height: 230px;
+  object-fit: cover;
 }
+
 .card {
-  border-radius: 8px;
-  background-color: #ffffff;
-  color: #000000;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
 }
-.card-body{
+
+.card-body {
   display: flex;
   flex-direction: column;
   align-items: start;
-}
-.card-body h2, .card-body p, .lang_span, button {
-  margin-left:15px;
-  margin-top: 15px;
+  padding: 25px;
 }
 
-.lang_span{
+.card-body h2 {
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.card-body p {
+  margin: 0 0 20px 0;
+  color: #a0aec0;
+}
+
+.lang_span {
   display: flex;
-  gap: 5px;
+  gap: 8px;
+  margin: 0 0 20px 0;
+  flex-wrap: wrap;
 }
 
-.card-body span{
-  padding: 6px;
-  border: 1px solid black;
+.card-body span {
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  background-color: rgb(144, 140, 140);
-  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #a9dfbf;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+}
+
+.card-body button {
+  margin: 0;
+  background: transparent;
+  border: 1px solid #28a745;
+  color: #28a745;
+  border-radius: 6px;
+  width: 100%;
+  height: 45px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.card-body button:hover {
+  background-color: #28a745;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(40, 167, 69, 0.4);
+}
+/* contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 20px 20px;
+  border: 1px solid rgb(106, 100, 100);
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 5px;
+  
+}
+
+.contact h2 {
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.textarea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.textarea .form-label {
+  font-family: "JetBrains Mono", monospace;
+  color: #a9dfbf;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.textarea .form-control {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #e2e8f0;
+  padding: 12px 16px;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.textarea .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(40, 167, 69, 0.5);
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+  color: #ffffff;
+  outline: none;
+}
+
+.textarea .form-control::placeholder {
+  color: rgba(169, 223, 191, 0.4);
 }
 /* footer */
 .foot-container {
